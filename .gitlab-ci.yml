@@ -1,9 +1,20 @@
 image: node:24.16-alpine
 
-test:
+stages:
+  - build
+  - test
 
-  tags:
-    - react
-  script:
-    - yarn install
-    - CI=true yarn test
+install_dependencies:
+  stage: build
+  script: yarn install
+  cache:
+    paths:
+      - node_modules
+    key:
+      files:
+        - yarn.lock
+run_tests:
+  stage: test
+  script: CI=true yarn test
+
+
