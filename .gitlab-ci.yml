@@ -1,8 +1,9 @@
 image: node:14.15.0-stretch
 
 test:
+
+  tags:
+    - react
   script:
-    tags:
-      - react
     - yarn install
     - CI=true yarn test
