@@ -17,7 +17,7 @@ install_dependencies:
     key:
       files:
         - yarn.lock
-      paths:
+    paths:
         - node_modules
 run_tests:
   stage: test
