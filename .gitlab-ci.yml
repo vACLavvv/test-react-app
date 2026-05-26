@@ -6,6 +6,8 @@ stages:
 
 install_dependencies:
   stage: build
+  tags:
+    - react
   script: yarn install
   cache:
     paths:
