@@ -17,6 +17,8 @@ install_dependencies:
         - yarn.lock
 run_tests:
   stage: test
+  tags:
+    - react
   script: CI=true yarn test
 
 
