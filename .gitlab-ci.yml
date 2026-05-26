@@ -13,7 +13,12 @@ install_dependencies:
   artifacts:
     paths:
       - node_modules
-
+  cache:
+    key:
+      files:
+        - yarn.lock
+      paths:
+        - node_modules
 run_tests:
   stage: test
   tags:
