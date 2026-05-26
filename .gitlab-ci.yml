@@ -10,23 +10,14 @@ install_dependencies:
     - react
   script:
     - yarn install
-  cache:
+  artifacts:
     paths:
       - node_modules
-    key:
-      files:
-        - yarn.lock
+
 run_tests:
   stage: test
   tags:
     - react
   script: 
     - CI=true yarn test
-  cache:
-    paths:
-      - node_modules
-    key:
-      files:
-        - yarn.lock
-
 
